@@ -38,7 +38,7 @@
 2. Execute o script:
 
 ```bash
-python CancunfFlash.py
+python cancunfFlash.py
 ```
 
 3. Siga as instruções na tela:
