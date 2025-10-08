@@ -1,71 +1,47 @@
-# Cancunf Flash Installer 🚀
+# Cancunf Flash Installer 🚀  
 
-> ⚠️ **AVISO IMPORTANTE** ⚠️
-> **ESTE SCRIPT É APENAS PARA FLASH DE CUSTOM ROMS ANTIGAS COM ANDROID 14 OU AS PRIMEIRAS VERSÕES DE CUSTOM ROM A15 PARA O MOTO G54 (CANCUNF).**
-> **NÃO ME RESPONSABILIZO POR QUALQUER DANO AO DISPOSITIVO. USE POR SUA CONTA E RISCO.**
-
-**Cancunf Flash Installer** é um script Python que automatiza o processo de instalação de Custom ROMs no Moto G54 (Cancunf). Ele detecta dispositivos em Fastboot, gerencia slots, permite flash opcional da stock ROM A14 e realiza sideload de arquivos `.zip` da custom ROM de forma segura.
-
----
-
-## 📌 Funcionalidades
-
-* Detecta dispositivo conectado em **Fastboot** automaticamente.
-* Flash opcional da **Stock ROM A14**.
-* Configura slot ativo (`a` ou `b`) automaticamente.
-* Flash do `vendor_boot.img` da custom ROM.
-* Suporte para **boot.img personalizado** opcional.
-* Sideload do arquivo `.zip` da custom ROM.
-* Mensagens detalhadas e pausas para prevenção de erros.
-* Suporte inicial para **Android 15 (versões novas)** — em desenvolvimento.
-* Em preparação: suporte para **custom ROMs Android 16**.
+> ⚠️ **AVISO IMPORTANTE** ⚠️  
+> Este script foi desenvolvido **exclusivamente para o Moto G54 5G (codinome Cancunf)**.  
+> Ele realiza o **flash de Custom ROMs baseadas no Android 16**.  
+> **Não me responsabilizo por qualquer dano ao dispositivo. Use por sua conta e risco.**  
 
 ---
 
-## 🛠️ Requisitos
+## 📖 Sobre o projeto  
 
-* Python 3.x
-* Módulos Python: `tkinter`, `colorama`
-* `fastboot` e `adb` funcionando no PATH
-* Cabo USB compatível
-* Backup completo dos dados (o flash **apaga tudo!**)
+**Cancunf Flash Installer** é um script em Python que **automatiza o processo de instalação de Custom ROMs** no Moto G54 (Cancunf).  
 
----
+Ele simplifica tarefas que, normalmente, seriam manuais:  
+- Detecção do dispositivo via **ADB / Fastboot**  
+- Flash do **initial zip**  
+- Flash do **zip da ROM customizada**  
+- Flash opcional de um **boot.img personalizado**  
+- Reinicialização automática entre **ADB, Fastboot e Recovery**  
 
-## ⚡ Como usar
-
-1. Conecte o dispositivo via USB em modo **Fastboot**.
-2. Execute o script:
-
-```bash
-python cancunfFlash.py
-```
-
-3. Siga as instruções na tela:
-
-   * Escolha se deseja flashar a **Stock A14**.
-   * Configure slots e reinicie no bootloader quando solicitado.
-   * Selecione os arquivos da **custom ROM** (`vendor_boot.img`, `.zip`, opcional `boot.img`).
-   * Realize o sideload e aguarde o reboot final.
-
-4. Ao final, o dispositivo estará com a **Custom ROM instalada**.
+O objetivo é deixar o processo mais rápido e menos propenso a erros manuais.  
 
 ---
 
-## ⚠️ Avisos importantes
+## 🛠️ Requisitos  
 
-* Este script **apaga todos os dados do dispositivo**. Faça backup antes de iniciar.
-* Uso **por sua conta e risco**. O autor não se responsabiliza por danos ao dispositivo.
-* Destinado apenas a **Android 14 e primeiras builds de A15** para Cancunf.
-* Futuras versões podem suportar Android 16, mas **use somente builds testadas**.
-* Certifique-se de usar a **ROM correta para o modelo Cancunf**.
-> ⚠️ **REQUISITO CRÍTICO** ⚠️  
-> Para o funcionamento correto do script, **é necessário ter os arquivos da Stock ROM Android 14 U1TD34.94-12-7** na pasta `A14`.  
-> Sem esses arquivos, o flash da Custom ROM **não funcionará corretamente**.
+- Python 3.x  
+- Módulos Python: `tkinter`, `colorama`  
+- Ferramentas `adb` e `fastboot` configuradas no **PATH**  
+- Cabo USB de boa qualidade  
+- **Backup completo dos dados** (o processo apaga tudo)  
+- Compatível com **Windows** e **Linux**  
+- **Termux:** não oficialmente suportado (pode exigir adaptação manual)  
 
-## 👨‍💻 Créditos e Testes
+---
 
-* **Desenvolvedor principal:** Lucas
-* Inspirado em práticas comuns de flash de ROMs Motorola / Android.
-* Ferramentas utilizadas: Python, ADB, Fastboot, Colorama, Tkinter.
-* **Testado com sucesso em:** Moto G54 (Cancunf) com Android 14 e primeiras builds de A15.
+## ⚡ Como usar  
+
+1. **Conecte** o dispositivo via USB.  
+   - Modo inicial: **ADB**  
+   - O script cuidará da transição para **Fastboot** ou **Recovery** quando necessário.  
+
+2. Execute o script no terminal:  
+
+   ```bash
+   python cancunfFlash.py
+   ```
