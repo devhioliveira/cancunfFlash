@@ -1,3 +1,4 @@
+![Banner](https://raw.githubusercontent.com/devhioliveira/cancunfFlash/refs/heads/main/assets/banner.jpg)
 # Cancunf Flash 🚀
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python) ![Platform](https://img.shields.io/badge/Platform-Windows%20|%20Linux-brightgreen) ![Status](https://img.shields.io/badge/Status-Stable-success)
